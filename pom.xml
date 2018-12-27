@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tosim.base</groupId>
+    <artifactId>tosim-second-dependencies</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>tosim's second party dependencies</description>
+
+    <properties>
+        <tosim-commons.version>1.0.1-SNAPSHOT</tosim-commons.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.tosim.commons</groupId>
+                <artifactId>tosim-commons-utils</artifactId>
+                <version>${tosim-commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tosim.commons</groupId>
+                <artifactId>tosim-commons-web</artifactId>
+                <version>${tosim-commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>libs-releases</id>
+            <url>http://47.100.63.91:7021/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>libs-snapshots</id>
+            <url>http://47.100.63.91:7021/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
