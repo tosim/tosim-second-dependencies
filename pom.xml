@@ -24,7 +24,7 @@
 
             <dependency>
                 <groupId>com.tosim.commons</groupId>
-                <artifactId>tosim-commons-web</artifactId>
+                <artifactId>tosim-commons-front</artifactId>
                 <version>${tosim-commons.version}</version>
             </dependency>
         </dependencies>
